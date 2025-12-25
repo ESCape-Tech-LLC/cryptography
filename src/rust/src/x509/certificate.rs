@@ -420,7 +420,7 @@ pub(crate) fn load_der_x509_certificate(
 
     let raw = OwnedCertificate::try_new(data, |data| asn1::parse_single(data.as_bytes(py)))?;
     // Parse cert version immediately so we can raise error on parse if it is invalid.
-    cert_version(py, raw.borrow_dependent().tbs_cert.version)?;
+    // cert_version(py, raw.borrow_dependent().tbs_cert.version)?;
     // determine if the serial is not positive and raise a warning if it is. We
     // want to drop support for this sort of invalid encoding eventually.
     warn_if_not_positive(py, raw.borrow_dependent().tbs_cert.serial.as_bytes())?;
