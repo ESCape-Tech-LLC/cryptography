@@ -16,7 +16,7 @@ build-backend = "maturin"
 
 [project]
 name = "cryptography"
-version = "46.0.3"
+version = "46.0.4"
 authors = [
     { name = "The Python Cryptographic Authority and individual contributors", email = "cryptography-dev@python.org" },
 ]
